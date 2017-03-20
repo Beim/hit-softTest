@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lunar-calendar": "*",
-    "date.js": "*",
     "ava": "^0.18.2",
+    "date.js": "*",
     "js-yaml": "^3.8.2",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.1.0",
+    "koa-static": "^3.0.0",
+    "lunar-calendar": "*",
     "nyc": "^10.1.2"
   }
 }

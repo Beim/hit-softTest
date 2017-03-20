@@ -42,6 +42,7 @@ module.exports = (year, month, day) => {
   lunarDate = lunar.solarToLunar(year, month, day);
 
   return {
+    flag: 1,
     gongli: {
       year,
       month,
