@@ -18,7 +18,7 @@ module.exports = (year, month, day) => {
   month = parseInt(month);
   day = parseInt(day);
   if (!year || year >= 2100 || year < 1900) 
-    return error('Invaild Year, should be [1900, 2100]');
+    return error('Invaild Year, should be [1900, 2100)');
   if (!month || month < 0 || month > 12)
     return error('Invaild Month, should be [1, 12]');
   if (!day || day < 0 || day > 31)
