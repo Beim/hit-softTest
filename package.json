@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc --reporter=lcov ava -v ./test/*.js"
   },
-  "author": "",
+  "author": "beim",
   "license": "ISC",
   "dependencies": {
     "ava": "^0.18.2",
