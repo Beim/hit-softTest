@@ -17,7 +17,7 @@ module.exports = (year, month, day) => {
   year = parseInt(year);
   month = parseInt(month);
   day = parseInt(day);
-  if (!year || year > 2100 || year < 1900) 
+  if (!year || year >= 2100 || year < 1900) 
     return error('Invaild Year, should be [1900, 2100]');
   if (!month || month < 0 || month > 12)
     return error('Invaild Month, should be [1, 12]');
@@ -27,12 +27,16 @@ module.exports = (year, month, day) => {
     isLeapYear = 1;
   else
     isLeapYear = 0;
-  if (month == 2)
-    if (day > cal[1][isLeapYear])
+  if (month == 2) {
+    if (day > cal[1][isLeapYear]) {
       return error(`Invaild Date, should [1, ${cal[1][isLeapYear]}]`);
-  else
-    if (day > cal[month - 1])
+    }
+  }
+  else {
+    if (day > cal[month - 1]) {
       return error(`Invaild Date, should [1, ${cal[month - 1]}]`);
+    }
+  }
 
   nextDate = DateParser("next day",  new Date(year, month - 1, day));
   dayOfWeek = nextDate.getDay();

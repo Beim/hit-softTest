@@ -27,7 +27,7 @@ for (let data of cases) {
         t.true(result.nongli.month == month);
         t.true(result.nongli.day == day);
       }
-      if (data.d) {
+      if (data.d !== undefined) {
         t.true(result.gongli.dayOfWeek == data.d);
       }
     }
